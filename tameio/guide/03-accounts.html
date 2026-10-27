@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. 계정 만들기와 시작 잔액 | Paidia Studio</title><meta name="description" content="3. 계정 만들기와 시작 잔액 — Paidia Studio 공식 웹사이트">
+<link rel="canonical" href="https://paidiastudio.com/tameio/guide/03-accounts.html">
+<!-- Google Search Console 인증: 아래 주석을 실제 인증값으로 교체하세요.
+<meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE">
+-->
+<meta name="theme-color" content="#235e48"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body>
+<a class="skip" href="/tameio/guide/03-accounts.html#main">본문으로 / Skip to content</a>
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">p</span>Paidia Studio</a><nav class="site-nav" aria-label="주 메뉴 / Main navigation"><a href="/#apps">앱과 게임 / Apps</a><a href="/about/">스튜디오 / About</a><a href="/contact/">문의 / Contact</a><a href="/tameio/guide/03-accounts.html#en" lang="en">English ↓</a></nav></div></header>
+<main id="main" class="wrap"><div class="prose"><div class="page-head"><p class="eyebrow">PAIDIA STUDIO</p><h1>3. 계정 만들기와 시작 잔액</h1><p></p></div><nav class="language-nav" aria-label="언어 / Language"><a href="/tameio/guide/03-accounts.html#ko">한국어</a><a href="/tameio/guide/03-accounts.html#en" lang="en">English</a></nav><section id="ko" lang="ko"><nav class="crumbs"><a href="/tameio/guide/">사용 가이드</a></nav>
+<h2>3. 계정 만들기와 시작 잔액</h2>
+<p>계정은 돈이 실제로 있거나 빚이 잡히는 위치다(2장 참고). 이 장에서는 <strong>새 계정</strong>을 만들고 <strong>시작 잔액</strong>을 맞추는 방법을 다룬다.</p>
+<h2>여섯 가지 계정 유형</h2>
+<p>새 계정을 추가할 때 다음 여섯 유형 중 하나를 고른다.</p>
+<div class="table-wrap"><table><thead><tr><th>유형</th><th>예시</th><th>잔액의 의미</th></tr></thead><tbody><tr><td>은행</td><td>입출금 통장, 급여 계좌</td><td>실제 보유 현금</td></tr><tr><td>예적금</td><td>정기예금, 적금</td><td>만기까지 묶인 저축 자산</td></tr><tr><td>투자</td><td>증권 계좌</td><td>평가액이 아닌 실제 입출금 기준 자산</td></tr><tr><td>현금</td><td>지갑, 비상금</td><td>실제 보유 현금</td></tr><tr><td>신용카드</td><td>신용카드</td><td>결제한 만큼 쌓이는 <strong>부채</strong>(빚) — 자산이 아니다</td></tr><tr><td>기타</td><td>빌려준 돈, 빌린 돈</td><td>등록할 때 <strong>자산 또는 부채</strong>를 직접 고른다. 저장 후에는 바꿀 수 없다</td></tr></tbody></table></div>
+<p>신용카드는 은행·예적금·투자·현금과 성격이 다르다. 카드를 쓸수록 "이 카드로 갚아야 할 금액"이 <strong>늘어나며</strong>, 결제일에 대금을 갚으면 그 부채가 줄어든다.</p>
+<p>화면 제목은 <strong>새 자산</strong>이고, 이름을 넣는 <strong>자산 이름</strong> 필드가 공통으로 있다.</p>
+<figure><img src="/tameio/guide/assets/04-accounts-new-five-types.png" alt="새 자산 화면의 여섯 계정 유형 선택과 이름 필드" loading="lazy"><figcaption>새 자산 화면 — 여섯 유형 선택과 자산 이름 필드</figcaption></figure>
+<h2>시작 잔액을 맞춘다</h2>
+<p>새 계정을 만들 때 지금 그 계좌·카드의 실제 잔액을 입력해두면, 그 시점 잔액을 만들기 위한 거래 하나가 자동으로 생긴다. 입력 필드 이름은 유형에 따라 다르다.</p>
+<ul><li>은행·예적금·투자·현금·기타: <strong>장부 시작 잔액</strong>. 화면에는 "별도의 기초잔액 기록이 생성됩니다. 수입이나 지출로 집계되지 않습니다"라는 안내가 함께 뜬다.</li><li>신용카드: <strong>현재 사용액</strong> — 지금까지 갚지 않고 남아 있는 카드 대금을 입력한다.</li></ul>
+<p>이 값은 그대로 저장되는 숫자가 아니라 시작 시점을 맞추기 위한 거래를 만드는 것이다. 이후 실제 거래가 쌓이면 화면에 표시되는 <strong>현재 잔액</strong>은 그 거래들로부터 항상 다시 계산된다.</p>
+<h2>나중에 잔액이 실제와 안 맞으면</h2>
+<p>은행 앱과 타미오의 잔액이 조금씩 어긋나는 경우(누락된 거래, 반올림 등) 별도 화면을 열 필요 없이 <strong>계정 상세 화면 맨 위에 보이는 "현재 잔액" 숫자를 직접 눌러</strong> 실제 값으로 고친다. 값을 넣은 뒤 <strong>잔액 맞추기</strong>를 누르면 <strong>차액만큼의 보정 거래</strong>가 하나 생겨 잔액을 실제와 같게 만든다. 차액이 0이면 아무 거래도 만들어지지 않는다.</p>
+<figure><img src="/tameio/guide/assets/06-accounts-actual-balance-edit.png" alt="계정 상세 화면의 현재 잔액 인라인 편집과 잔액 맞추기 버튼" loading="lazy"><figcaption>계정 상세 화면의 "현재 잔액" 인라인 편집과 "잔액 맞추기" 버튼</figcaption></figure>
+<h2>계정을 정리할 때</h2>
+<p>일반 계좌·카드·현금·투자 계정에는 "종료"나 "보관" 메뉴가 없다 — 계정 상세의 관리 메뉴(⋯)에는 이름 변경과 삭제만 있다. 더는 쓰지 않는 계정은 그대로 목록에 남겨 둬도 문제가 없고, 정말 지우고 싶다면 14장에서 다루는 삭제(거래 유무에 따라 동작이 다르다)를 사용한다. <strong>예적금 계정만 예외로</strong>, 만기나 중도 해지 시 원금·이자를 입금 처리한 뒤 <strong>종료</strong>하는 별도 흐름을 계정 상세에서 제공한다.</p>
+<nav class="chapter-pager"><span class="prev"><a href="/tameio/guide/02-three-axes.html">← 2. 먼저 알아둘 세 축 — 계정, 카테고리, 예산</a></span><span class="next"><a href="/tameio/guide/04-transactions.html">4. 거래 입력 — 지출·수입·이체·카드대금·환불·분할 →</a></span></nav></section><section id="en" lang="en" class="english"><p class="eyebrow">ENGLISH</p><nav class="crumbs"><a href="/tameio/guide/#en">사용 가이드</a></nav>
+<h2>3. Creating Accounts and Starting Balances</h2>
+<p>An account is the place money actually sits, or where debt accrues (see chapter 2). This chapter covers creating a <strong>new account</strong> and getting its <strong>starting balance</strong> right.</p>
+<h2>The six account types</h2>
+<p>When you add a new account you choose one of these six types.</p>
+<div class="table-wrap"><table><thead><tr><th>Type</th><th>Examples</th><th>What the balance means</th></tr></thead><tbody><tr><td>Bank</td><td>Checking account, salary account</td><td>Cash you actually hold</td></tr><tr><td>Savings</td><td>Term deposit, savings plan</td><td>Savings tied up until maturity</td></tr><tr><td>Investment</td><td>Brokerage account</td><td>Assets measured by actual deposits and withdrawals, not market value</td></tr><tr><td>Cash</td><td>Wallet, emergency cash</td><td>Cash you actually hold</td></tr><tr><td>Credit Card</td><td>Credit card</td><td><strong>Debt</strong> that builds up as you spend — not an asset</td></tr><tr><td>Other</td><td>Money lent or borrowed</td><td>Choose whether it is an <strong>asset or debt</strong> when registering it. This cannot be changed after saving</td></tr></tbody></table></div>
+<p>A credit card behaves differently from bank, savings, investment, and cash accounts. The more you use the card, the more "the amount owed on this card" <strong>grows</strong>, and paying the bill on the due date reduces that debt.</p>
+<p>The screen is titled <strong>New Asset</strong>, and every type shares an <strong>Asset name</strong> field.</p>
+<figure><img src="/tameio/guide/assets/en-04-accounts-new-five-types.png" alt="The six account types and the name field on the New Asset screen" loading="lazy"><figcaption>The six account types and the name field on the New Asset screen</figcaption></figure>
+<h2>Setting the starting balance</h2>
+<p>If you enter the real current balance of the account or card when you create it, the app automatically creates one transaction that produces that balance. The name of the input field depends on the type.</p>
+<ul><li>Bank, savings, investment, cash, and other: <strong>Ledger starting balance</strong>. The screen also explains that "A separate opening balance record will be created. It is not income or expense."</li><li>Credit card: <strong>Current Usage</strong> — enter the card debt you have not yet repaid.</li></ul>
+<p>This value is not stored as a number; it creates a transaction that establishes your starting point. As real transactions accumulate, the <strong>Current Balance</strong> shown on screen is always recalculated from them.</p>
+<h2>When the balance later disagrees with reality</h2>
+<p>If your bank app and Tameio drift apart (a missed transaction, rounding, and so on), you do not need to open a separate screen. <strong>Tap the "Current Balance" figure at the top of the account detail screen</strong> and type the real value. Then tap <strong>Match this balance</strong>, and a single <strong>adjusting transaction for the difference</strong> is created so the balance matches reality. If the difference is zero, no transaction is created.</p>
+<figure><img src="/tameio/guide/assets/en-06-accounts-actual-balance-edit.png" alt="Editing the actual balance" loading="lazy"><figcaption>Edit the calculated balance directly, then continue to the balancing transaction.</figcaption></figure>
+<h2>Tidying up accounts</h2>
+<p>Ordinary bank, card, cash, and investment accounts have no "close" or "archive" menu — the manage menu (⋯) on the account detail screen offers only rename and delete. It is perfectly fine to leave an account you no longer use sitting in the list. If you really want it gone, use the deletion described in chapter 14 (which behaves differently depending on whether the account has transactions). <strong>Savings accounts are the one exception</strong>: the account detail screen offers a separate flow to record the principal and interest on maturity or early termination and then <strong>Close</strong> the account.</p>
+<nav class="chapter-pager"><span class="prev"><a href="/tameio/guide/02-three-axes.html#en">← 2. Three Axes to Know First — Accounts, Categories, Budgets</a></span><span class="next"><a href="/tameio/guide/04-transactions.html#en">4. Entering Transactions — Expense, Income, Transfer, Card Payment, Refund, Split →</a></span></nav></section></div></main><footer class="site-footer"><div class="wrap"><div class="footer-top"><a class="brand" href="/">Paidia Studio</a><nav class="footer-links" aria-label="Footer"><a href="/about/">회사 정보 / About</a><a href="/contact/">문의 / Contact</a><a href="/privacy/">개인정보 / Privacy</a><a href="/terms/">약관 / Terms</a></nav></div><div data-company-details><p>파이디아 스튜디오 / Paidia Studio · <a href="mailto:contact@paidiastudio.com">contact@paidiastudio.com</a></p><noscript>상세 회사 정보는 JavaScript 활성화 후 확인하거나 이메일로 문의해 주세요. / Enable JavaScript for business details or contact us by email.</noscript></div><p class="copyright">© Paidia Studio. 일상에 쓸모를, 여가에 즐거움을. / Useful everyday. Playful by nature.</p></div></footer></body></html>

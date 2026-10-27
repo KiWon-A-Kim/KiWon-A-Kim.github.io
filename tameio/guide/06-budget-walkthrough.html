@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. 예산 실전 예제 | Paidia Studio</title><meta name="description" content="6. 예산 실전 예제 — Paidia Studio 공식 웹사이트">
+<link rel="canonical" href="https://paidiastudio.com/tameio/guide/06-budget-walkthrough.html">
+<!-- Google Search Console 인증: 아래 주석을 실제 인증값으로 교체하세요.
+<meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE">
+-->
+<meta name="theme-color" content="#235e48"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body>
+<a class="skip" href="/tameio/guide/06-budget-walkthrough.html#main">본문으로 / Skip to content</a>
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">p</span>Paidia Studio</a><nav class="site-nav" aria-label="주 메뉴 / Main navigation"><a href="/#apps">앱과 게임 / Apps</a><a href="/about/">스튜디오 / About</a><a href="/contact/">문의 / Contact</a><a href="/tameio/guide/06-budget-walkthrough.html#en" lang="en">English ↓</a></nav></div></header>
+<main id="main" class="wrap"><div class="prose"><div class="page-head"><p class="eyebrow">PAIDIA STUDIO</p><h1>6. 예산 실전 예제</h1><p></p></div><nav class="language-nav" aria-label="언어 / Language"><a href="/tameio/guide/06-budget-walkthrough.html#ko">한국어</a><a href="/tameio/guide/06-budget-walkthrough.html#en" lang="en">English</a></nav><section id="ko" lang="ko"><nav class="crumbs"><a href="/tameio/guide/">사용 가이드</a></nav>
+<h2>6. 예산 실전 예제</h2>
+<p>이 장은 처음부터 끝까지 하나의 가상 예제를 따라간다. 숫자는 전부 암산 가능한 만 원 단위이며, 실제 사용자 데이터가 아니다. 예제를 따라 하면서 "왜 예산은 계좌 잔액과 다르게 움직이는가"에 스스로 답할 수 있는 것이 목표다.</p>
+<h2>예제 설정</h2>
+<ul><li>예산 기간: 매월 1일 시작 (달력월 기준).</li><li>급여: 매월 23일에 은행 계좌로 3,000,000원 입금.</li><li>예산 묶음 세 개, 이월 스위치 설정이 서로 다르다(스위치의 정확한 동작은 3단계에서 설명한다).</li></ul>
+<div class="table-wrap"><table><thead><tr><th>예산 묶음</th><th>이월 스위치 설정</th><th>8월 배정</th><th>8월 실제 사용</th><th>8월 말 남은 금액</th></tr></thead><tbody><tr><td>생활비</td><td>둘 다 끔 (풀로 반환)</td><td>800,000원</td><td>650,000원</td><td>+150,000원</td></tr><tr><td>여행비 준비금</td><td>남은 금액 이월 켬</td><td>200,000원</td><td>0원</td><td>+200,000원</td></tr><tr><td>카페/간식</td><td>초과 사용액 이월 켬</td><td>100,000원</td><td>130,000원</td><td>-30,000원</td></tr></tbody></table></div>
+<p>8월 1일 시점 배정 가능(풀)이 1,100,000원이었고, 세 묶음에 정확히 800,000 + 200,000 + 100,000 = 1,100,000원을 배정해 풀은 0원이 됐다고 하자.</p>
+<h2>1단계 — 8월 한 달 동안 지출을 입력한다</h2>
+<p>각 지출을 해당 카테고리로 입력하면 그 카테고리가 속한 예산 묶음의 <strong>사용액</strong>이 늘어난다.</p>
+<ul><li>생활비 묶음: 식비·교통비 등으로 650,000원 지출 → 사용액 650,000원, 남은 금액 800,000 − 650,000 = <strong>150,000원</strong>.</li><li>여행비 준비금: 이번 달은 지출 없음 → 남은 금액 그대로 <strong>200,000원</strong>.</li><li>카페/간식: 예상보다 많이 써서 130,000원 지출 → 남은 금액 100,000 − 130,000 = <strong>−30,000원</strong> (초과 사용).</li></ul>
+<figure><img src="/tameio/guide/assets/15-budget-after-spending.png" alt="예산 화면, 세 묶음의 배정/사용액/남은 금액 카드" loading="lazy"><figcaption>예산 화면, 8월 말 세 묶음의 배정/사용액/남은 금액 카드</figcaption></figure>
+<p>이 시점에서 남은 금액이 음수인 카페/간식은 오류가 아니라 <strong>이번 달 예상보다 많이 썼다는 신호</strong>다. 계좌 잔액이 마이너스가 됐다는 뜻이 아니라, 그 카테고리에 정한 한도를 넘겼다는 뜻이다.</p>
+<h2>2단계 — 8월 23일 급여를 실제 수입으로 기록한다</h2>
+<p>급여 3,000,000원을 은행 계좌 수입 거래로 입력한다. 이 순간 <strong>배정 가능(풀)</strong>이 3,000,000원 늘어난다. 8월 예산 기간은 이미 배정을 끝냈으므로 이 돈은 <strong>9월 예산을 위한 재원</strong>이 된다.</p>
+<blockquote><p>급여를 미리 배정하는 기능은 없다. 급여가 실제 거래로 기록된 뒤에만 그 금액을 배정할 수 있다. "이번 달 안에 받을 예정"이라는 이유만으로는 배정 가능액이 늘지 않는다.</p></blockquote>
+<h2>3단계 — 8월 말, 기간을 마감하고 9월로 넘어간다</h2>
+<p>각 예산 묶음에는 남은 금액의 <strong>부호마다 따로</strong> 켜고 끌 수 있는 이월 스위치 두 개가 있다 — <strong>남은 금액 이월</strong>(양수일 때)과 <strong>초과 사용액 이월</strong>(음수일 때). 스위치를 켜면 그 부호의 금액을 <strong>같은 묶음</strong>에 남기고, 끄면 <strong>배정 가능(풀)</strong> 쪽으로 옮긴다. 이 예제의 세 묶음은 다음처럼 설정돼 있다.</p>
+<div class="table-wrap"><table><thead><tr><th>예산 묶음</th><th>남은 금액 이월</th><th>초과 사용액 이월</th><th>8월 말 상태</th><th>9월 시작 시 묶음 잔액</th><th>풀에 생기는 변화</th></tr></thead><tbody><tr><td>생활비</td><td>끔</td><td>끔</td><td>+150,000원 (양수)</td><td>0원 (리셋)</td><td>+150,000원 반환</td></tr><tr><td>여행비 준비금</td><td>켬</td><td>—</td><td>+200,000원 (양수)</td><td>+200,000원 (유지)</td><td>변화 없음</td></tr><tr><td>카페/간식</td><td>—</td><td>켬</td><td>−30,000원 (음수)</td><td>−30,000원 (유지)</td><td>변화 없음</td></tr></tbody></table></div>
+<figure><img src="/tameio/guide/assets/16-budget-rollover-toggles.png" alt="예산 기간·이월 설정 화면의 세 묶음별 남은 금액 이월/초과 사용액 이월 스위치" loading="lazy"><figcaption>예산 기간·이월 설정 화면 — 묶음마다 "남은 금액 이월"/"초과 사용액 이월"을 독립적으로 켜고 끈다</figcaption></figure>
+<p>두 스위치 조합 모두 <strong>돈이 생기거나 사라지지 않는다.</strong> 같은 금액이 "묶음 안"에 남을지, "풀로 돌아갈지"만 달라진다. 이 예제에서 9월 1일 풀은 다음과 같이 계산된다.</p>
+<pre><code>9월 1일 풀 = 8월 말 풀(0원) + 8월 급여(3,000,000원) + 생활비 반환분(150,000원)
+           = 3,150,000원</code></pre>
+<h2>4단계 — 9월 배정을 정한다</h2>
+<p><strong>예산 배정</strong> 화면에서 각 묶음에 이번 기간 쓰고 싶은 총액(목표)을 입력하면, 화면이 이미 이월된 금액을 고려해 <strong>실제로 저장할 신규 배정</strong>을 자동 계산해준다. 카페/간식처럼 이월이 음수인 묶음에서 이 차이가 분명히 드러난다.</p>
+<div class="table-wrap"><table><thead><tr><th>예산 묶음</th><th>9월 이월</th><th>9월에 쓰고 싶은 목표</th><th>자동 계산된 신규 배정</th><th>풀 변화</th></tr></thead><tbody><tr><td>생활비</td><td>0원</td><td>800,000원</td><td>800,000원</td><td>−800,000원</td></tr><tr><td>여행비 준비금</td><td>200,000원</td><td>300,000원</td><td>100,000원</td><td>−100,000원</td></tr><tr><td>카페/간식</td><td>−30,000원</td><td>100,000원</td><td><strong>130,000원</strong></td><td>−130,000원</td></tr></tbody></table></div>
+<p>카페/간식은 "9월에도 10만 원짜리 예산으로 쓰고 싶다"는 목표(100,000원)를 그대로 입력해도, 지난달 초과분 30,000원을 먼저 메워야 하므로 화면이 자동으로 신규 배정 130,000원을 계산해 저장한다. 사용자가 130,000원을 직접 암산해 입력할 필요는 없다.</p>
+<pre><code>9월 1일 풀 = 3,150,000 − 800,000 − 100,000 − 130,000 = 2,120,000원</code></pre>
+<figure><img src="/tameio/guide/assets/17-budget-allocation-carryover.png" alt="예산 배정 화면의 카페/간식 묶음 이월과 목표 배정 입력" loading="lazy"></figure>
+<p><em>예산 배정 화면 — 카페/간식 묶음의 이월 −30,000원과 목표 100,000원, 자동 계산된 신규 배정 130,000원</em></p>
+<h2>검산</h2>
+<p>두 시점 모두에서 다음 항등식이 성립해야 한다.</p>
+<pre><code>전체 예산가치 = 배정 가능 풀 + 모든 예산 묶음의 남은 금액</code></pre>
+<ul><li>8월 말(마감 전): 풀 3,000,000 + (150,000 + 200,000 − 30,000) = 3,320,000원.</li><li>9월 1일(마감·재배정 후): 풀 2,120,000 + (800,000 + 300,000 + 100,000) = 3,320,000원.</li></ul>
+<p>숫자가 정확히 같다. 마감과 재배정을 거치며 <strong>돈이 늘거나 준 것이 아니라 위치만 이동</strong>했다는 뜻이다.</p>
+<h2>자주 하는 오해 정리</h2>
+<ul><li><strong>"이번 달 급여 예정이 있으니 지금 배정할 수 있다"</strong> — 아니다. 배정은 실제로 기록된 수입에서만 가능하다.</li><li><strong>"풀이 음수면 뭔가 잘못됐다"</strong> — 항상 오류는 아니다. 예산 기간(달력월)과 급여 주기(23일)가 다르면 월초에 일시적으로 풀이 부족해 보일 수 있다. 이런 경우 한 달 앞서 예산을 편성하면 해결된다 (예: 8월 23일 급여를 9월 예산에 배정).</li><li><strong>"카테고리별로 예산을 따로 저장한다"</strong> — 아니다. 카테고리는 분류일 뿐이고, 여러 카테고리를 묶은 것이 예산 묶음이다. 카테고리를 새로 만들어도 예산 묶음에 연결하지 않으면 그 지출은 특정 묶음이 아니라 풀 전체를 줄인다.</li></ul>
+<blockquote><p><strong>예산 배정</strong> 화면은 각 예산 묶음 이름이 섹션 제목이고, 그 아래 −/+ 버튼과 슬라이더가 딸린 숫자 입력칸(별도 라벨 없이 금액만 입력)이 목표 배정액 필드다. 아래에서 설명하는 "그룹 간 이동"은 이 화면과 별개의 독립된 화면이다.</p></blockquote>
+<h2>참고 — 배정을 다른 묶음으로 옮기기</h2>
+<p>한 묶음에 너무 많이 배정했다면 풀을 거치지 않고 <strong>그룹 간 이동</strong> 화면에서 두 묶음 사이의 금액을 바로 옮길 수 있다. 이동 전후 두 묶음 금액의 합은 그대로 유지된다(합계 0 이동).</p>
+<figure><img src="/tameio/guide/assets/18-budget-move-between-groups.png" alt="그룹 간 이동 화면 — 보낼 그룹·받을 그룹과 이동 금액" loading="lazy"><figcaption>그룹 간 이동 화면</figcaption></figure>
+<nav class="chapter-pager"><span class="prev"><a href="/tameio/guide/05-categories-tags.html">← 5. 카테고리·태그</a></span><span class="next"><a href="/tameio/guide/07-recurring-walkthrough.html">7. 반복 규칙·예정 거래 실전 예제 →</a></span></nav></section><section id="en" lang="en" class="english"><p class="eyebrow">ENGLISH</p><nav class="crumbs"><a href="/tameio/guide/#en">사용 가이드</a></nav>
+<h2>6. Budgets — A Worked Example</h2>
+<p>This chapter follows one imaginary example from start to finish. Every figure is a round number you can do in your head, and none of it is real user data. The goal is that by the end you can answer "why does a budget move differently from an account balance?" yourself.</p>
+<h2>The setup</h2>
+<ul><li>Budget period: monthly, starting on the 1st (calendar months).</li><li>Salary: $3,000 paid into the bank account on the 23rd of each month.</li><li>Three budget groups, each with different carryover switch settings (the switches are explained precisely in step 3).</li></ul>
+<div class="table-wrap"><table><thead><tr><th>Budget group</th><th>Carryover switches</th><th>August allocated</th><th>August actually spent</th><th>Left at end of August</th></tr></thead><tbody><tr><td>Living</td><td>Both off (returned to the pool)</td><td>$800</td><td>$650</td><td>+$150</td></tr><tr><td>Travel Fund</td><td>Rollover remaining amount on</td><td>$200</td><td>$0</td><td>+$200</td></tr><tr><td>Cafe/Snacks</td><td>Rollover overspending on</td><td>$100</td><td>$130</td><td>−$30</td></tr></tbody></table></div>
+<p>Say that on 1 August the Available to allocate (pool) was $1,100, and exactly 800 + 200 + 100 = $1,100 was allocated across the three groups, leaving the pool at $0.</p>
+<h2>Step 1 — Spend through August</h2>
+<p>Entering each expense under its category increases the <strong>spent</strong> amount of the budget group that category belongs to.</p>
+<ul><li>Living group: $650 spent on food, transport, and so on → spent $650, left 800 − 650 = <strong>$150</strong>.</li><li>Travel Fund: nothing spent this month → left unchanged at <strong>$200</strong>.</li><li>Cafe/Snacks: more than expected, $130 spent → left 100 − 130 = <strong>−$30</strong> (overspent).</li></ul>
+<figure><img src="/tameio/guide/assets/en-15-budget-after-spending.png" alt="The budget screen showing allocated, spent, and available for the three groups" loading="lazy"><figcaption>Budget screen at the end of August — allocated, spent, and available for the three groups</figcaption></figure>
+<p>A negative amount left in Cafe/Snacks is not an error; it is <strong>a signal that you spent more than planned this month</strong>. It does not mean your account went negative — it means you went past the limit you set for that category.</p>
+<h2>Step 2 — Record the 23 August salary as real income</h2>
+<p>Enter the $3,000 salary as an income transaction into the bank account. At that moment <strong>Available to allocate (pool)</strong> increases by $3,000. The August budget period has already been allocated, so this money becomes <strong>the funding for September</strong>.</p>
+<blockquote><p>There is no feature for allocating a salary in advance. You can only allocate money once it has been recorded as a real transaction. "I am due to be paid later this month" does not increase the amount available to allocate.</p></blockquote>
+<h2>Step 3 — Close out August and move into September</h2>
+<p>Every budget group has two carryover switches that you turn on and off <strong>separately for each sign</strong> of the amount left — <strong>Rollover remaining amount</strong> (when positive) and <strong>Rollover overspending</strong> (when negative). Switching one on keeps that amount <strong>in the same group</strong>; switching it off moves the amount to the <strong>Available to allocate (pool)</strong>. The three groups in this example are set up as follows.</p>
+<div class="table-wrap"><table><thead><tr><th>Budget group</th><th>Rollover remaining amount</th><th>Rollover overspending</th><th>End of August</th><th>Group balance on 1 September</th><th>Change to the pool</th></tr></thead><tbody><tr><td>Living</td><td>Off</td><td>Off</td><td>+$150 (positive)</td><td>$0 (reset)</td><td>+$150 returned</td></tr><tr><td>Travel Fund</td><td>On</td><td>—</td><td>+$200 (positive)</td><td>+$200 (kept)</td><td>No change</td></tr><tr><td>Cafe/Snacks</td><td>—</td><td>On</td><td>−$30 (negative)</td><td>−$30 (kept)</td><td>No change</td></tr></tbody></table></div>
+<figure><img src="/tameio/guide/assets/en-16-budget-rollover-toggles.png" alt="The per-group Rollover remaining amount and Rollover overspending switches on the Budget Period &amp; Carryover screen" loading="lazy"><figcaption>The per-group Rollover remaining amount and Rollover overspending switches on the Budget Period &amp; Carryover screen</figcaption></figure>
+<p>Neither combination of switches <strong>creates or destroys money.</strong> All that changes is whether the same amount stays "inside the group" or "goes back to the pool". In this example the pool on 1 September works out as follows.</p>
+<pre><code>Pool on 1 September = pool at end of August ($0) + August salary ($3,000)
+                      + amount returned by Living ($150)
+                    = $3,150</code></pre>
+<h2>Step 4 — Decide the September allocations</h2>
+<p>On the <strong>Allocate Budget</strong> screen you enter the total you want each group to have for this period (the target), and the screen works out <strong>the new allocation it will actually save</strong> by taking the amount already carried over into account. The difference is clearest in a group like Cafe/Snacks whose carryover is negative.</p>
+<div class="table-wrap"><table><thead><tr><th>Budget group</th><th>September carryover</th><th>Target for September</th><th>New allocation, calculated</th><th>Change to the pool</th></tr></thead><tbody><tr><td>Living</td><td>$0</td><td>$800</td><td>$800</td><td>−$800</td></tr><tr><td>Travel Fund</td><td>$200</td><td>$300</td><td>$100</td><td>−$100</td></tr><tr><td>Cafe/Snacks</td><td>−$30</td><td>$100</td><td><strong>$130</strong></td><td>−$130</td></tr></tbody></table></div>
+<p>For Cafe/Snacks you simply enter the target you want — "I want a $100 budget in September too" ($100) — and because last month's $30 overspend has to be covered first, the screen works out and saves a new allocation of $130 for you. You never have to do that arithmetic in your head.</p>
+<pre><code>Pool on 1 September = 3,150 − 800 − 100 − 130 = $2,120</code></pre>
+<figure><img src="/tameio/guide/assets/en-17-budget-allocation-carryover.png" alt="The Cafe/Snacks carryover and target on the Allocate Budget screen" loading="lazy"><figcaption>The Cafe/Snacks carryover and target on the Allocate Budget screen</figcaption></figure>
+<h2>Checking the arithmetic</h2>
+<p>The following identity has to hold at both points in time.</p>
+<pre><code>total budget value = available pool + amount left in every budget group</code></pre>
+<ul><li>End of August (before closing): pool 3,000 + (150 + 200 − 30) = $3,320.</li><li>1 September (after closing and reallocating): pool 2,120 + (800 + 300 + 100) = $3,320.</li></ul>
+<p>The figures match exactly. Closing the period and reallocating <strong>moved money around; it did not create or lose any</strong>.</p>
+<h2>Common misunderstandings</h2>
+<ul><li><strong>"My salary is due this month, so I can allocate it now."</strong> No. You can only allocate income that has actually been recorded.</li><li><strong>"A negative pool means something is broken."</strong> Not always. If the budget period (calendar month) and the payday (the 23rd) do not line up, the pool can look short at the start of a month. Budgeting one month ahead solves it — for example, allocating the 23 August salary to the September budget.</li><li><strong>"Budgets are stored per category."</strong> No. A category is only a classification; a budget group is a bundle of categories. Create a new category and leave it unconnected to a budget group, and its spending reduces the whole pool rather than any one group.</li></ul>
+<blockquote><p>On the <strong>Allocate Budget</strong> screen each budget group name is a section heading, and beneath it the number field with − / + buttons and a slider (amount only, with no separate label) is the target allocation field. The "move between groups" flow described below is a separate screen.</p></blockquote>
+<h2>Note — moving an allocation to another group</h2>
+<p>If you allocated too much to one group, you can move money straight between two groups on the <strong>Move Between Groups</strong> screen, without going through the pool. The two groups' amounts still add up to the same total before and after the move (a zero-sum move).</p>
+<figure><img src="/tameio/guide/assets/en-18-budget-move-between-groups.png" alt="The Move Between Groups screen — source group, destination group, and amount" loading="lazy"><figcaption>The Move Between Groups screen — source group, destination group, and amount</figcaption></figure>
+<nav class="chapter-pager"><span class="prev"><a href="/tameio/guide/05-categories-tags.html#en">← 5. Categories and Tags</a></span><span class="next"><a href="/tameio/guide/07-recurring-walkthrough.html#en">7. Recurring Rules and Scheduled Transactions — A Worked Example →</a></span></nav></section></div></main><footer class="site-footer"><div class="wrap"><div class="footer-top"><a class="brand" href="/">Paidia Studio</a><nav class="footer-links" aria-label="Footer"><a href="/about/">회사 정보 / About</a><a href="/contact/">문의 / Contact</a><a href="/privacy/">개인정보 / Privacy</a><a href="/terms/">약관 / Terms</a></nav></div><div data-company-details><p>파이디아 스튜디오 / Paidia Studio · <a href="mailto:contact@paidiastudio.com">contact@paidiastudio.com</a></p><noscript>상세 회사 정보는 JavaScript 활성화 후 확인하거나 이메일로 문의해 주세요. / Enable JavaScript for business details or contact us by email.</noscript></div><p class="copyright">© Paidia Studio. 일상에 쓸모를, 여가에 즐거움을. / Useful everyday. Playful by nature.</p></div></footer></body></html>
