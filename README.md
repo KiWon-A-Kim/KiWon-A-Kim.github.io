@@ -28,7 +28,7 @@ DueDish는 사용자가 연결한 프로젝트명으로 표시합니다. 공식 
 - 공통 스타일과 모바일 대응: `assets/site.css`.
 - 본문과 정책: 각 `index.html`의 한국어·영어 양쪽을 수정.
 - 헤더·푸터 구조는 각 HTML에 정적으로 포함됩니다. 구조 변경은 전체 HTML에 동일하게 적용하세요. 회사 상세 값은 JS 파일 한 곳에만 있습니다.
-- 회사 상세 정보 표시에 JavaScript가 필요합니다. 비활성화 시 회사명·이메일·안내가 표시됩니다. 이메일을 바꾸는 경우 본문의 정적 mailto 링크도 함께 수정하세요.
+- 회사 상세 정보 표시에 JavaScript가 필요합니다. 비활성화 시 회사명·이메일·안내가 표시됩니다. 이메일은 `assets/site.js`의 `publicEmails`에서 수정 후 `python scripts/sync_contacts.py`로 정적 HTML의 대체값을 동기화하세요.
 - Google Search Console 인증 meta 태그 자리는 모든 HTML의 head 주석에 있습니다. 실제 인증값으로 교체하세요.
 - 노란색 미정 항목은 심사 제출 전에 실제 운영 내용으로 완성해야 합니다.
 
@@ -55,7 +55,7 @@ http://localhost:8000 에서 확인합니다. 루트 경로를 사용하므로 f
 - 기존 privacy.html의 한국어·영어 본문과 수정일을 보존하고 별도의 보완 항목을 추가.
 - 한국어/영어 사용 가이드의 목차 및 15개 장을 같은 페이지에 통합.
 - 스크린샷 64개를 수정 없이 복사.
-- 2026-10-27 사용자 요청에 따라 타미오 기존 개인 지원 이메일을 제거하고 `contact@paidiastudio.com`으로 통일. 한국어에만 있던 FAQ 4개를 영어로 보완.
+- 개인 이메일은 제거했으며, 2026-10-28 확정 기준으로 앱 지원은 `support@paidiastudio.com`, 개인정보 문의는 `privacy@paidiastudio.com`을 사용. 한국어에만 있던 FAQ 4개를 영어로 보완.
 - 원본 저장소와 기존 지원 사이트 리디렉션은 변경하지 않았습니다. 앱에 등록된 지원 URL은 별도로 갱신해야 합니다.
 - 가이드에서 “계정”은 장부 자산 계정입니다. 타미오 기존 정책에는 회원가입·로그인 계정이 없다고 명시되어 있습니다.
 
@@ -116,6 +116,7 @@ http://localhost:8000 에서 확인합니다. 루트 경로를 사용하므로 f
 - `.nojekyll`: 정적 배포 설정.
 - `sitemap.xml`, `robots.txt`: 검색 크롤링 안내.
 - `scripts/check_site.py`: 선택적인 정적 검증 도구.
+- `scripts/sync_contacts.py`: 공통 이메일 설정을 정적 HTML 링크·표시값에 반영하는 편집 보조 도구.
 - `README.md`: 운영 및 인수 문서.
 - `CNAME`: 기존 파일, 변경하지 않음.
 
@@ -264,3 +265,14 @@ http://localhost:8000 에서 확인합니다. 루트 경로를 사용하므로 f
 - 개인정보 보호법 제30조: https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025127653
 - Google Play 계정 삭제: https://support.google.com/googleplay/android-developer/answer/13327111?hl=en
 - Apple 계정 삭제: https://developer.apple.com/support/offering-account-deletion-in-your-app/
+
+## 공개 이메일 (2026-10-28 확정)
+
+| 페이지·용도 | 주소 |
+| --- | --- |
+| 공통 푸터, 홈, 회사 정보, 일반·제휴 문의 | contact@paidiastudio.com |
+| 앱 소개·FAQ 지원, 앱별 계정/데이터 삭제 | support@paidiastudio.com |
+| 회사·앱 개인정보처리방침, 보호책임자·권리 행사 | privacy@paidiastudio.com |
+| 문의 페이지 | 위 세 주소를 용도별 안내 |
+
+공개 주소의 기준 설정은 `assets/site.js`의 `publicEmails`입니다. 변경 시 `python scripts/sync_contacts.py`를 실행하고 문서를 갱신합니다. HTML에는 JavaScript가 꺼져 있어도 동작하는 정적 링크가 남습니다. 이 명령은 선택적인 편집 보조 도구이며 배포 빌드가 아닙니다. 내부 관리용 주소는 저장하지 않습니다.

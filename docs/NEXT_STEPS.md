@@ -34,7 +34,7 @@ DueDish는 사용자가 연결한 프로젝트명으로 표시합니다. 공식 
 | --- | --- | --- | --- | --- |
 | COMPANY-01 | 미완료 | 사업자 실정보 입력 | 대표자, 사업자등록번호, 통신판매업 신고번호 또는 적용 여부, 주소, 전화번호, 영문 표기 | `assets/site.js`의 `company` 객체. `/about/`와 모든 푸터에 동일한 값 표시 확인 |
 | COMPANY-02 | 미완료 | 개인정보 보호책임자 확정 | 성명·직책, 연락처 | `assets/site.js`의 `privacyOfficer`. 모든 정책에서 동일한 값 표시 |
-| CONTACT-01 | 주소 통일 완료 / 송수신 확인 대기 | 사업자 이메일 운영 확인 | 공개 주소는 contact@paidiastudio.com으로 확정. 실제 송수신 가능 여부와 응답 운영 기준은 확인 필요 | `contact/index.html`, `tameio/index.html`, 정책 및 가이드의 연락처. 정적 웹사이트는 메일함을 생성하지 않음 |
+| CONTACT-01 | 주소 통일 완료 / 송수신 확인 대기 | 사업자 이메일 운영 확인 | 공개 주소는 용도별 3개로 분리 완료. 답변은 영업일 기준 2~3일. 실제 송수신은 확인 필요 | `contact/index.html`, `tameio/index.html`, 정책 및 가이드의 연락처. 정적 웹사이트는 메일함을 생성하지 않음 |
 | PRIVACY-WEB | 미완료 | 웹사이트 개인정보처리방침 확정 | GitHub Pages 로그/IP 처리, 이메일 제공업체, 문의 본문·첨부파일 처리 및 보유 기간, 위탁·국외 처리, 권리 행사 절차, 시행일 | `privacy/index.html`의 한국어·영어. 구현 자체의 미사용 기능과 호스팅/이메일 제공업체의 처리를 구분 |
 | PRIVACY-TAMEIO | 미완료 | 타미오 정책 보완 | 법적 근거, 파기 기술 방식, 환율 API 로그/IP·국외 처리, 문의 이메일 보관·위탁·권리 절차, 정책 시행일 | `tameio/privacy/index.html`. 기존 원문은 근거 없이 바꾸지 않고 확인된 변경만 반영 |
 | APP-FRIDGE | 부분 완료 | DueDish 소개 반영·도움말 신규 작성 | 공식 출시명·한국어명, 지원 플랫폼, 상세 기능, 사용법, 자주 묻는 질문. 개발 단계·TestFlight 미진행·도움말 미작성 확인 완료 | 이름은 `assets/site.js`의 `fridge`, 본문은 `fridge/index.html`, 홈 설명은 `index.html` |
@@ -139,8 +139,9 @@ git diff --check
 
 ## 지원 이메일 운영 및 변경
 
-- 2026-10-27 사용자 결정: 일반 문의·앱 지원·개인정보·삭제 요청에 `contact@paidiastudio.com`만 공개합니다. 기존 개인 이메일 표시는 제거했습니다.
-- 주소 변경 시 `assets/site.js`의 `company.email`뿐 아니라 모든 HTML의 표시 문자열·mailto 링크(제목 쿼리 유지)와 문서도 함께 변경합니다. 정적 본문은 JS 없이 읽을 수 있도록 유지합니다.
-- 앱 내부, App Store Connect / Play Console, 원본 tameio-support 저장소의 주소는 이 사이트 변경과 별개입니다. 후속 요청에서 확인·변경할 항목으로 남깁니다.
-- 메일함·별칭 생성, 전달 설정 및 실제 송수신 테스트는 수행하지 않았습니다.
-- 향후 `support@` 등 사업자 도메인의 별칭을 같은 메일함에 연결할 수 있습니다. 필요 시 사용자가 선택한 메일 서비스에 맞춰 설정합니다.
+- 2026-10-28 확정: 대표·일반·제휴 `contact@paidiastudio.com`, 앱 지원·버그·계정/데이터 삭제 `support@paidiastudio.com`, 개인정보 보호책임자·권리 행사 `privacy@paidiastudio.com`.
+- 공개 이메일의 기준 설정은 `assets/site.js`의 `publicEmails`. 변경 후 `python scripts/sync_contacts.py`를 실행하면 표시 문자열과 mailto의 정적 대체값도 갱신됩니다. 빌드나 Python 없이 배포·열람 가능합니다.
+- 일반 답변은 영업일 기준 2~3일. 실제 삭제 완료 기간은 확인 전까지 기존 미정 항목을 유지합니다.
+- 내부 관리용 주소는 공개 설정·본문·주석·문서에 저장하지 않습니다.
+- 앱 내부, App Store Connect / Play Console, 원본 tameio-support 저장소의 주소 변경은 별도 후속 작업입니다.
+- 메일함 생성, 전달 설정, 실제 송수신 테스트는 수행하지 않았습니다.

@@ -27,5 +27,7 @@
 
 ## 공개 연락처
 
-- 사용자가 확정한 공개 문의·지원 주소는 `contact@paidiastudio.com`입니다. 개인 이메일을 다시 노출하지 않습니다.
-- 주소 변경 요청 시 공통 JS 값, 정적 HTML의 표시 문자열과 mailto, 한국어·영어 본문, 운영 문서를 함께 갱신합니다.
+- 대표·제휴 문의는 `contact@paidiastudio.com`, 앱 지원·삭제 요청은 `support@paidiastudio.com`, 개인정보 문의·권리 행사는 `privacy@paidiastudio.com`을 사용합니다.
+- 내부 관리용 주소와 개인 이메일은 사이트 소스·문서·주석 어디에도 추가하지 않습니다.
+- 공개 주소 설정은 `assets/site.js`의 `publicEmails`입니다. 변경 후 `python scripts/sync_contacts.py`로 정적 HTML을 동기화하고 운영 문서도 갱신합니다.
+- 앱 지원·삭제 mailto에는 앱 이름을 포함한 한국어/영어 제목을 유지합니다.
