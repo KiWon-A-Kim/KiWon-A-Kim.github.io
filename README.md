@@ -1,5 +1,7 @@
 # Paidia Studio 공식 웹사이트
 
+다음 수정·추가 요청은 [다음 작업 문서](docs/NEXT_STEPS.md)를 기준으로 진행합니다. 우선순위별 작업 목록, 수정 파일, 필요한 정보 양식, 검증 절차가 정리되어 있습니다. 자동 작업의 유지 조건은 [AGENTS.md](AGENTS.md)에 있습니다.
+
 프레임워크·npm·빌드 도구 없이 GitHub Pages에 배포하는 정적 HTML + CSS 사이트입니다. 본문·정책·내비게이션은 정적 HTML입니다. 최소한의 바닐라 JS로 회사 공통 정보와 미정 앱 이름을 표시합니다.
 
 - 도메인: https://paidiastudio.com
