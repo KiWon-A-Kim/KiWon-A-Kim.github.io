@@ -8,7 +8,7 @@ const company = {
   email: 'contact@paidiastudio.com',
   phone: '{{전화번호}}',
   privacyOfficer: '{{확인 필요: 개인정보 보호책임자 성명·직책}}',
-  fridge: '{{냉장고 앱 이름}}',
+  fridge: 'DueDish',
   game: '{{게임 이름}}'
 };
 const fields = [
