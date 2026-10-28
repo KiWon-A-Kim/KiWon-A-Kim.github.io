@@ -6,23 +6,23 @@ const publicEmails = {
 };
 /* 회사 정보와 미정 앱 이름은 이 파일 한 곳에서 수정합니다. HTML은 빌드 없이 배포됩니다. */
 const company = {
-  name: '파이디아 스튜디오 / Paidia Studio',
-  representative: '{{대표자명}}',
-  registration: '{{사업자등록번호}}',
-  commerce: '{{통신판매업신고번호}}',
-  address: '{{사업장 주소}}',
+  name: '파이디아 스튜디오',
+  nameEn: 'Paidia Studio',
+  representative: '김기원',
+  representativeEn: 'KIWON KIM',
+  registration: '170-31-01826',
+  address: '경기도 파주시 쇠재로 30, 708동 1605호',
+  addressEn: '708-1605, 30 Soejae-ro, Paju-si, Gyeonggi-do, Republic of Korea',
   email: publicEmails.contact,
-  phone: '{{전화번호}}',
-  privacyOfficer: '{{확인 필요: 개인정보 보호책임자 성명·직책}}',
+  privacyOfficer: '김기원 (KIWON KIM)',
+  controller: '파이디아 스튜디오 (Paidia Studio)',
   fridge: 'DueDish',
   game: '{{게임 이름}}'
 };
-const fields = [
-  ['상호 / Business name', 'name'], ['대표자 / Representative', 'representative'],
-  ['사업자등록번호 / Business registration', 'registration'],
-  ['통신판매업 신고번호 / E-commerce registration', 'commerce'],
-  ['주소 / Address', 'address'], ['이메일 / Email', 'email'], ['전화 / Phone', 'phone']
-];
+const fields = {
+  ko: [['상호', 'name'], ['대표자', 'representative'], ['사업자등록번호', 'registration'], ['사업장 주소', 'address'], ['대표 이메일', 'email']],
+  en: [['Business name', 'nameEn'], ['Representative', 'representativeEn'], ['Business Registration No.', 'registration'], ['Business address', 'addressEn'], ['Email', 'email']]
+};
 document.querySelectorAll('[data-email]').forEach(link => {
   const address = publicEmails[link.dataset.email];
   if (!address) return;
@@ -34,9 +34,26 @@ document.querySelectorAll('[data-email-text]').forEach(node => {
   if (address) node.textContent = address;
 });
 document.querySelectorAll('[data-company-details]').forEach(container => {
+  if (container.closest('.site-footer')) {
+    const lines = ['ko', 'en'].map(lang => {
+      const line = document.createElement('p');
+      line.lang = lang;
+      line.textContent = lang === 'ko'
+        ? `${company.name} | 대표 ${company.representative} | 사업자등록번호 ${company.registration} | `
+        : `${company.nameEn} | Representative: ${company.representativeEn} | Business Registration No. ${company.registration} | `;
+      const email = document.createElement('a');
+      email.href = 'mailto:' + company.email;
+      email.textContent = company.email;
+      line.append(email);
+      return line;
+    });
+    container.replaceChildren(...lines);
+    return;
+  }
+  const lang = container.closest('[lang]').lang === 'en' ? 'en' : 'ko';
   const list = document.createElement('dl');
   list.className = 'company-details';
-  for (const [label, key] of fields) {
+  for (const [label, key] of fields[lang]) {
     const row = document.createElement('div');
     const term = document.createElement('dt');
     const value = document.createElement('dd');

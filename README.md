@@ -187,20 +187,14 @@ http://localhost:8000 에서 확인합니다. 루트 경로를 사용하므로 f
 - `tameio/guide/assets/en-44-dangerous-delete-account.png`
 - `tameio/guide/assets/en-45-dangerous-data-reset.png`
 
-## 미정 값 및 확인 필요 항목 — 전체 60개
+## 미정 값 및 확인 필요 항목 — 전체 54개
 
 동일 문구는 한 번만 표시했습니다. 정책은 한국어·영어 양쪽에 반영하세요.
 
 - **`{{게임 이름}}`** — `assets/site.js`
-- **`{{대표자명}}`** — `assets/site.js`
-- **`{{사업자등록번호}}`** — `assets/site.js`
-- **`{{사업장 주소}}`** — `assets/site.js`
-- **`{{전화번호}}`** — `assets/site.js`
-- **`{{통신판매업신고번호}}`** — `assets/site.js`
 - **`{{확인 필요: fridge: 삭제 요청 본인 확인 방법·처리 기한·문의 기록 보존 예외/근거/기간}}`** — `fridge/delete-account/index.html`
 - **`{{확인 필요: game: 삭제 요청 본인 확인 방법·처리 기한·문의 기록 보존 예외/근거/기간}}`** — `game/delete-account/index.html`
 - **`{{확인 필요: tameio: 삭제 요청 본인 확인 방법·처리 기한·문의 기록 보존 예외/근거/기간}}`** — `tameio/delete-account/index.html`
-- **`{{확인 필요: 개인정보 보호책임자 성명·직책}}`** — `assets/site.js`
 - **`{{확인 필요: 게임: 개인정보처리방침 시행일·변경 고지 절차}}`** — `game/privacy/index.html`
 - **`{{확인 필요: 게임: 광고/분석 SDK·쿠키·자동 수집 항목·거부 방법}}`** — `game/privacy/index.html`
 - **`{{확인 필요: 게임: 기기/서버 저장 위치·보유 기간·법정 보존 근거}}`** — `game/privacy/index.html`
@@ -254,7 +248,7 @@ http://localhost:8000 에서 확인합니다. 루트 경로를 사용하므로 f
 
 ## 실제 운영 확인
 
-- 회사 실정보와 영문 이름/주소를 확인하고 미정 값을 해소합니다.
+- 회사 실정보·영문 표기·개인정보 보호책임자는 2026-10-28 사용자 제공값으로 확정했습니다. 주소는 회사 소개에만 표시하며 공통 푸터는 두 언어의 상호·대표자·등록번호·대표 이메일을 표시합니다.
 - contact@paidiastudio.com 실제 송수신을 확인합니다. 공개 사이트에는 사업자 이메일만 사용합니다. 정적 사이트는 메일함을 생성하지 않습니다.
 - 앱별 수집/보관/제3자 제공/SDK/삭제 기능을 확정하고 스토어 Data safety, App Privacy 응답과 정책을 일치시킵니다.
 - GitHub Pages 설정, 도메인 DNS 및 HTTPS를 확인합니다.
