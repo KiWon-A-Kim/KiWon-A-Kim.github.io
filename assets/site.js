@@ -11,8 +11,8 @@ const company = {
   representative: '김기원',
   representativeEn: 'KIWON KIM',
   registration: '170-31-01826',
-  address: '경기도',
-  addressEn: 'Gyeonggi-do, Republic of Korea',
+  address: '경기도 파주시',
+  addressEn: 'Paju-si, Gyeonggi-do, Republic of Korea',
   email: publicEmails.contact,
   privacyOfficer: '김기원 (KIWON KIM)',
   controller: '파이디아 스튜디오 (Paidia Studio)',
@@ -20,8 +20,8 @@ const company = {
   game: '{{게임 이름}}'
 };
 const fields = {
-  ko: [['상호', 'name'], ['대표자', 'representative'], ['사업자등록번호', 'registration'], ['사업장 주소', 'address'], ['대표 이메일', 'email']],
-  en: [['Business name', 'nameEn'], ['Representative', 'representativeEn'], ['Business Registration No.', 'registration'], ['Business address', 'addressEn'], ['Email', 'email']]
+  ko: [['상호', 'name'], ['대표자', 'representative'], ['사업자등록번호', 'registration'], ['소재지', 'address'], ['대표 이메일', 'email']],
+  en: [['Business name', 'nameEn'], ['Representative', 'representativeEn'], ['Business Registration No.', 'registration'], ['Location', 'addressEn'], ['Email', 'email']]
 };
 document.querySelectorAll('[data-email]').forEach(link => {
   const address = publicEmails[link.dataset.email];
