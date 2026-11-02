@@ -55,7 +55,7 @@ DueDish는 사용자가 연결한 프로젝트명으로 표시합니다. 공식 
 | QA-01 | 미실시 | 데스크톱·모바일 화면 검증 | 375px 전후 모바일 및 데스크톱에서 메뉴, 회사 정보, 긴 미정 표시, 표·이미지, 영어 이동, 키보드 포커스와 가로 넘침 확인 |
 | QA-02 | 미완료 | 영어 문서 최종 교정 | 회사 실정보와 정책 확정 후 한국어·영어 내용 일치 확인. 현재 한국어로 남긴 미정 표시는 확정 시 영어 본문에서도 이해 가능한 내용으로 교체 |
 | STORE-01 | 미완료 | 심사 URL 및 앱 개인정보 응답 정합성 확인 | README의 URL 목록을 기준으로 App Privacy/Data safety 및 실제 앱 기능과 정책 대조. URL 입력·심사 제출은 사용자가 요청한 범위에서 진행 |
-| MIGRATE-01 | 전환 완료 / legacy 삭제 대기 (2026-11-02) | 기존 타미오 지원 주소 전환 | 앱 가이드를 `https://paidiastudio.com/tameio/guide/`로 전환하고 통합 사이트의 최신 문구·자산을 검증한다. 새 Pages 배포 확인 뒤 legacy `tameio-support` 저장소를 삭제하면 완료 |
+| MIGRATE-01 | 완료 (2026-11-02) | 기존 타미오 지원 주소 전환 | 앱 가이드를 `https://paidiastudio.com/tameio/guide/`로 전환하고 최신 문구·자산, Pages 배포, 실서비스 200을 검증했다. legacy `tameio-support` 저장소는 검증된 bare mirror를 보존한 뒤 삭제 |
 | SEARCH-01 | 정보 대기 | Search Console 인증 추가 | 실제 인증 meta 값 수령 후 모든 HTML head의 지정 주석에 반영. `sitemap.xml` 확인 및 요청 시 Search Console 등록 |
 
 ### 필요할 때 추가할 개선
@@ -129,7 +129,7 @@ git diff --check
 | --- | --- | --- |
 | 2026-10-27 | 초기 사이트 구현 및 타미오 이전 | `fbfe32a`, main 푸시 완료. 배포 최종 성공 및 시각 검증은 미확인 |
 | 2026-10-27 | 다음 작업 문서 및 저장소 작업 지침 추가 | 실행 목록, 수정 위치, 사용자 정보 양식, 검증·재개 절차 문서화 |
-| 2026-11-02 | Tameio 공개자료 통합 전환 | 최신 반복 규칙 ko/en 문구를 `/tameio/guide/`에 동기화하고 앱 가이드 URL을 통합 상품 경로로 전환. legacy 저장소 삭제는 새 배포 검증 뒤 실행 |
+| 2026-11-02 | Tameio 공개자료 통합 전환 | 최신 반복 규칙 ko/en 문구를 `/tameio/guide/`에 동기화하고 앱 가이드 URL을 통합 상품 경로로 전환. Pages 배포·실서비스를 확인하고 bare mirror 보존 후 legacy 저장소 삭제 완료 |
 
 | 2026-10-27 | 앱별 상태 반영 | 사용자 제공 내용에 따라 타미오 TestFlight, DueDish 개발 중·도움말 미작성·TestFlight 미진행, 게임 기획 단계로 한국어·영어 소개 및 정책/삭제 페이지 안내 갱신 |
 
@@ -139,7 +139,7 @@ git diff --check
 - 공개 이메일의 기준 설정은 `assets/site.js`의 `publicEmails`. 변경 후 `python scripts/sync_contacts.py`를 실행하면 표시 문자열과 mailto의 정적 대체값도 갱신됩니다. 빌드나 Python 없이 배포·열람 가능합니다.
 - 일반 답변은 영업일 기준 2~3일. 실제 삭제 완료 기간은 확인 전까지 기존 미정 항목을 유지합니다.
 - 내부 관리용 주소는 공개 설정·본문·주석·문서에 저장하지 않습니다.
-- 앱 내부, App Store Connect / Play Console, 원본 tameio-support 저장소의 주소 변경은 별도 후속 작업입니다.
+- App Store Connect / Play Console의 주소 변경은 별도 후속 작업입니다. Tameio 앱 내부 가이드 주소와 legacy 저장소 퇴역은 2026-11-02에 완료했습니다.
 - 메일함 생성, 전달 설정, 실제 송수신 테스트는 수행하지 않았습니다.
 
 ## 2026-10-28 회사 정보 확정 반영

@@ -43,11 +43,11 @@ python -m http.server 8000
 
 http://localhost:8000 에서 확인합니다. 루트 경로를 사용하므로 file:// 더블클릭 방식은 지원하지 않습니다. Python 서버는 없는 주소에 사용자 정의 404를 자동 적용하지 않으므로 `/404.html`로 확인하세요. GitHub Pages에서는 루트 `404.html`이 사용됩니다.
 
-검증: 31개 이중 언어 HTML과 720개 로컬 참조, 공통 레이아웃, 인증 주석, CNAME 보존 검사 통과. 연결 가능한 브라우저가 없어 실제 데스크톱/모바일 렌더링 검사는 수행하지 못했습니다.
+검증: 31개 이중 언어 HTML과 721개 로컬 참조, 공통 레이아웃, 인증 주석, CNAME 보존 검사 통과. 연결 가능한 브라우저가 없어 실제 데스크톱/모바일 렌더링 검사는 수행하지 못했습니다.
 
 ## 타미오 이전 기록
 
-원본: https://github.com/KiWon-A-Kim/tameio-support
+퇴역한 원본 저장소: `KiWon-A-Kim/tameio-support` (2026-11-02 삭제)
 
 원본 커밋: `869799306e4f9ee357f632eb2247c59739a823de`.
 
@@ -56,8 +56,8 @@ http://localhost:8000 에서 확인합니다. 루트 경로를 사용하므로 f
 - 한국어/영어 사용 가이드의 목차 및 15개 장을 같은 페이지에 통합.
 - 스크린샷 64개를 수정 없이 복사.
 - 개인 이메일은 제거했으며, 2026-10-28 확정 기준으로 앱 지원은 `support@paidiastudio.com`, 개인정보 문의는 `privacy@paidiastudio.com`을 사용. 한국어에만 있던 FAQ 4개를 영어로 보완.
-- 앱의 사용자 가이드는 통합 상품 경로 `https://paidiastudio.com/tameio/guide/`를 사용합니다. legacy
-  `tameio-support` 저장소는 통합 사이트 배포 검증 뒤 삭제하는 퇴역 절차에 들어갔습니다.
+- 앱의 사용자 가이드는 통합 상품 경로 `https://paidiastudio.com/tameio/guide/`를 사용합니다.
+- legacy `tameio-support` 저장소는 통합 사이트 배포와 앱 링크 전환을 검증한 뒤 2026-11-02에 삭제했습니다.
 - 가이드에서 “계정”은 장부 자산 계정입니다. 타미오 기존 정책에는 회원가입·로그인 계정이 없다고 명시되어 있습니다.
 
 ## Apple / Google 입력 URL
