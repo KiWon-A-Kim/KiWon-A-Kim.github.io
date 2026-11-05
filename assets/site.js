@@ -17,7 +17,8 @@ const company = {
   privacyOfficer: '김기원 (KIWON KIM)',
   controller: '파이디아 스튜디오 (Paidia Studio)',
   fridge: 'DueDish',
-  game: '{{게임 이름}}'
+  game: '새 게임 (기획 중)',
+  gameEn: 'New Game (In Planning)'
 };
 const fields = {
   ko: [['상호', 'name'], ['대표자', 'representative'], ['사업자등록번호', 'registration'], ['소재지', 'address'], ['대표 이메일', 'email']],
